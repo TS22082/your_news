@@ -3,4 +3,9 @@
   grid-template-columns: 1fr;
 }
 
-
+.footer {
+  height: 10vh;
+  color: white;
+  background-color: black;
+  padding-left: 25px;
+}

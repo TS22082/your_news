@@ -94,9 +94,12 @@ class App extends Component {
     return (
       <div className="App">
         <div style={headerStyle}>
-          <p>your_news</p>
+          <p>The Your_News Project</p>
         </div>
         {this.state.rows}
+        <div className="footer">
+          <p>Powered by newapi.org </p>
+        </div>
       </div>
     );
   }
