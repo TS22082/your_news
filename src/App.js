@@ -53,7 +53,9 @@ class App extends Component {
       success: searchResults => {
         const results = searchResults.articles
         var newsRows = []
-        results.forEach(article => {
+
+        //TODO: Use index to not display hr element on last article
+        results.forEach((article, index) => {
           console.log(article)
           const newsRow = (
             <div key={article.publishedAt} style={newsRowStyle}>
