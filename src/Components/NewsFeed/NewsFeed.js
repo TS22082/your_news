@@ -19,7 +19,6 @@ class NewsFeed extends Component {
       'http://www.google.com/search?hl=en&source=hp&q=' +
       topic +
       '&aq=f&oq=&aqi='
-    //window.location.href = str2;
     window.open(str2, '_blank')
     console.log('Further information button clicked')
   }
@@ -58,7 +57,6 @@ class NewsFeed extends Component {
               >
                 To Article
               </button>
-
               {index !== results.length - 1 ? <hr /> : null}
             </div>
           )
