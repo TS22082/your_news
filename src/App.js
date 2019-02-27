@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import NewsFeed from './Components/NewsFeed'
+import NewsFeed from './Components/NewsFeed/NewsFeed'
 
 class App extends Component {
   constructor(props) {

@@ -1,0 +1,22 @@
+.newsRow {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.researchBtn {
+  padding: 10px;
+  margin-top: 2%;
+  background-color: #2ecc71;
+  border-style: none;
+  font-size: 1.15em;
+  color: white;
+}
+
+.sourceBtn {
+  padding: 10px;
+  margin-top: 2%;
+  background-color: #3498db;
+  border-style: none;
+  font-size: 1.15em;
+  color: white;
+}
