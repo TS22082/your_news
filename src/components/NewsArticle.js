@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 researchTopic(topic) {
   var str2 =
     'http://www.google.com/search?hl=en&source=hp&q=' +

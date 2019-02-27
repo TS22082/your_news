@@ -49,6 +49,7 @@ class NewsFeed extends Component {
       fontSize: '1.15em',
       color: 'white'
     }
+
     const API_KEY = WEATHER_API_KEY
     const urlString =
       'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + API_KEY
@@ -77,7 +78,8 @@ class NewsFeed extends Component {
               >
                 To Article
               </button>
-              <hr />
+
+              {index !== results.length - 1 ? <hr /> : null}
             </div>
           )
           newsRows.push(newsRow)

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-// import WEATHER_API_KEY from './secret'
-// import $ from 'jquery'
-import NewsFeed from './components/NewsFeed'
+import NewsFeed from './Components/NewsFeed'
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +16,7 @@ class App extends Component {
       paddingLeft: '10px'
     }
     var footerStyle = {
+      marginTop: '10px',
       color: 'white',
       display: 'grid',
       gridTemplateColumns: '1fr',
