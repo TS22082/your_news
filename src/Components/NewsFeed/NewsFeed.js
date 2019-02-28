@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import WEATHER_API_KEY from '../../secret'
 import $ from 'jquery'
 import './NewsFeed.css'
+import NewsArticle from './NewsArticle/NewsArticle'
 
 class NewsFeed extends Component {
   constructor(props) {
@@ -42,21 +43,13 @@ class NewsFeed extends Component {
           console.log(article)
           const newsRow = (
             <div key={article.publishedAt} className="newsRow">
-              <h3>{article.source.name}</h3>
-              <h4>{article.title}</h4>
-              <p>{article.description}</p>
-              <button
-                className="researchBtn"
-                onClick={() => this.researchTopic(article.title)}
-              >
-                Research Topic
-              </button>
-              <button
-                className="sourceBtn"
-                onClick={() => this.seeArticlePage(article.url)}
-              >
-                To Article
-              </button>
+              <NewsArticle
+                name={article.source.name}
+                title={article.title}
+                description={article.description}
+                researchTopic={() => this.researchTopic(article.title)}
+                seeArticlePage={() => this.seeArticlePage(article.url)}
+              />
               {index !== results.length - 1 ? <hr /> : null}
             </div>
           )
