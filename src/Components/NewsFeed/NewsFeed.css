@@ -3,34 +3,6 @@
   padding-right: 15%;
 }
 
-.researchBtn {
-  padding: 10px;
-  margin-top: 2%;
-  background-color: #2ecc71;
-  border-style: none;
-  font-size: 1.15em;
-  cursor: pointer;
-  color: white;
-  transition: all 0.2s ease;
-}
-
-.articleBtn {
-  padding: 10px;
-  margin-top: 2%;
-  background-color: #3498db;
-  border-style: none;
-  font-size: 1.15em;
-  cursor: pointer;
-  color: white;
-  transition: all 0.2s ease;
-}
-
-.articleBtn:hover,
-.researchBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
-}
-
 hr {
   border: 2px solid lightgrey;
   border-radius: 5px;

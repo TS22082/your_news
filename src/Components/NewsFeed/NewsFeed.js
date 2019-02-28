@@ -16,23 +16,17 @@ class NewsFeed extends Component {
   }
 
   researchTopic(topic) {
-    var str2 =
-      'http://www.google.com/search?hl=en&source=hp&q=' +
-      topic +
-      '&aq=f&oq=&aqi='
-    window.open(str2, '_blank')
-    console.log('Further information button clicked')
+    var location = `http://www.google.com/search?hl=en&source=hp&q=${topic}&aq=f&oq=&aqi=`
+    window.open(location, '_blank')
   }
 
   seeArticlePage(article) {
     window.open(article, '_blank')
-    console.log('To article button clicked')
   }
 
   getNews() {
     const API_KEY = WEATHER_API_KEY
-    const urlString =
-      'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + API_KEY
+    const urlString = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
     $.ajax({
       url: urlString,
       success: searchResults => {
@@ -40,7 +34,6 @@ class NewsFeed extends Component {
         var newsRows = []
 
         results.forEach((article, index) => {
-          console.log(article)
           const newsRow = (
             <div key={article.publishedAt} className="newsRow">
               <NewsArticle
