@@ -15,15 +15,6 @@ class NewsFeed extends Component {
     this.getNews()
   }
 
-  researchTopic(topic) {
-    var location = `http://www.google.com/search?hl=en&source=hp&q=${topic}&aq=f&oq=&aqi=`
-    window.open(location, '_blank')
-  }
-
-  seeArticlePage(article) {
-    window.open(article, '_blank')
-  }
-
   getNews() {
     const API_KEY = WEATHER_API_KEY
     const urlString = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
@@ -40,8 +31,7 @@ class NewsFeed extends Component {
                 name={article.source.name}
                 title={article.title}
                 description={article.description}
-                researchTopic={() => this.researchTopic(article.title)}
-                seeArticlePage={() => this.seeArticlePage(article.url)}
+                url={article.url}
               />
               {index !== results.length - 1 ? <hr /> : null}
             </div>
