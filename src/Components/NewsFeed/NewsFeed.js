@@ -7,7 +7,9 @@ import NewsArticle from './NewsArticle/NewsArticle'
 class NewsFeed extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      loading: true
+    }
     this.getNews = this.getNews.bind(this)
   }
 
@@ -38,7 +40,7 @@ class NewsFeed extends Component {
           )
           newsRows.push(newsRow)
         })
-        this.setState({ rows: newsRows })
+        this.setState({ rows: newsRows, loading: false })
       },
       error: (xhr, status, err) => {
         console.error('Error fetching data')
@@ -47,7 +49,7 @@ class NewsFeed extends Component {
   }
 
   render() {
-    return <div>{this.state.rows}</div>
+    return this.state.loading ? 'Loading' : <div>{this.state.rows}</div>
   }
 }
 
