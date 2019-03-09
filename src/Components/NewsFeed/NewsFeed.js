@@ -3,6 +3,7 @@ import WEATHER_API_KEY from '../../secret'
 import $ from 'jquery'
 import './NewsFeed.css'
 import NewsArticle from './NewsArticle/NewsArticle'
+import Loading from './Loading/Loading'
 
 class NewsFeed extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class NewsFeed extends Component {
   }
 
   render() {
-    return this.state.loading ? 'Loading' : <div>{this.state.rows}</div>
+    return this.state.loading ? <Loading /> : <div>{this.state.rows}</div>
   }
 }
 
