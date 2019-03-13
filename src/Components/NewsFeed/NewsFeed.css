@@ -3,6 +3,10 @@
   padding-right: 15%;
 }
 
+.lastRow {
+  margin-bottom: 15px;
+}
+
 hr {
   border: 2px solid lightgrey;
   border-radius: 5px;

@@ -36,7 +36,11 @@ class NewsFeed extends Component {
                 description={article.description}
                 url={article.url}
               />
-              {index !== results.length - 1 ? <hr /> : null}
+              {index !== results.length - 1 ? (
+                <hr />
+              ) : (
+                <div className="lastRow" />
+              )}
             </div>
           )
           newsRows.push(newsRow)

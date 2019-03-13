@@ -1,6 +1,12 @@
 .header {
+  display: grid;
+  align-content: center;
+  height: 8vh;
   color: white;
-  font-size: 1.25em;
-  background-color: dimgray;
-  padding-left: 10px;
+  font-size: 1.35em;
+  background-color: #696969;
+}
+
+.title {
+  padding-left: 15%;
 }
