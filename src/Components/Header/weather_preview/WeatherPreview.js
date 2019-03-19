@@ -36,7 +36,7 @@ class WeatherPreview extends Component {
   }
 
   render() {
-    return (
+    return !this.state.name ? null : (
       <div className="weather">
         <p>
           {this.state.name}: {this.state.temp} F &#778;
