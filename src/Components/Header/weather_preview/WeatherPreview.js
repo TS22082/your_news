@@ -19,7 +19,10 @@ class WeatherPreview extends Component {
       url: weatherURL,
       success: results => {
         //console.log(results)
-        this.setState({ name: results.name, temp: results.main.temp })
+        this.setState({
+          name: results.name,
+          temp: Math.round(results.main.temp)
+        })
         console.log(this.state)
       }
     })
