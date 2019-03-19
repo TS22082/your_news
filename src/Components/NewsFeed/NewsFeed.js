@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import WEATHER_API_KEY from '../../secret'
+import NEWS_API_KEY from '../../news_secret'
 import $ from 'jquery'
 import './NewsFeed.css'
 import NewsArticle from './NewsArticle/NewsArticle'
@@ -19,8 +19,7 @@ class NewsFeed extends Component {
   }
 
   getNews() {
-    const API_KEY = WEATHER_API_KEY
-    const urlString = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+    const urlString = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${NEWS_API_KEY}`
     $.ajax({
       url: urlString,
       success: searchResults => {

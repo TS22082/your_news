@@ -1,5 +1,6 @@
 .header {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   align-content: center;
   height: 8vh;
   color: white;
@@ -8,5 +9,10 @@
 }
 
 .title {
-  padding-left: 15%;
+  padding-left: 30%;
+}
+
+.weather {
+  justify-self: end;
+  padding-right: 30%;
 }
