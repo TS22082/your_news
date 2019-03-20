@@ -7,7 +7,7 @@ import $ from 'jquery'
 class WeatherPreview extends Component {
   constructor() {
     super()
-    this.state = { longitude: '', latitude: '', name: '', temp: '' }
+    this.state = { longitude: '', latitude: '', name: '', temp: '', icon: '' }
     this.getWeather = this.getWeather.bind(this)
   }
 
@@ -18,10 +18,11 @@ class WeatherPreview extends Component {
     $.ajax({
       url: weatherURL,
       success: results => {
-        //console.log(results)
+        console.log(results)
         this.setState({
           name: results.name,
-          temp: Math.round(results.main.temp)
+          temp: Math.round(results.main.temp),
+          icon: results.weather[0].icon
         })
         console.log(this.state)
       }
@@ -39,11 +40,13 @@ class WeatherPreview extends Component {
   }
 
   render() {
+    const iconImg = `http://openweathermap.org/img/w/${this.state.icon}.png`
     return !this.state.name ? null : (
       <div className="weather">
         <p>
           {this.state.name}: {this.state.temp} F &#778;
         </p>
+        <img src={iconImg} alt="nope" className="iconImg" />
       </div>
     )
   }
