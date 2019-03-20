@@ -40,7 +40,7 @@ class WeatherPreview extends Component {
   }
 
   render() {
-    const iconImg = `http://openweathermap.org/img/w/${this.state.icon}.png`
+    const iconImg = `https://openweathermap.org/img/w/${this.state.icon}.png`
     return !this.state.name ? null : (
       <div className="weather">
         <p>
