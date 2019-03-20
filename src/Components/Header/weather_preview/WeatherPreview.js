@@ -52,8 +52,6 @@ class WeatherPreview extends Component {
   }
 }
 
-//export default WeatherPreview
-
 export default geolocated({
   positionOptions: {
     enableHighAccuracy: false
