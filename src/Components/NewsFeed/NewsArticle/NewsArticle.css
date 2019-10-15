@@ -1,7 +1,7 @@
-.researchBtn {
+.researchBtn,
+.articleBtn {
   padding: 10px;
   margin-top: 2%;
-  background-color: #2ecc71;
   border-style: none;
   font-size: 1.15em;
   cursor: pointer;
@@ -9,15 +9,12 @@
   transition: all 0.2s ease;
 }
 
+.researchBtn {
+  background-color: #2ecc71;
+}
+
 .articleBtn {
-  padding: 10px;
-  margin-top: 2%;
   background-color: #3498db;
-  border-style: none;
-  font-size: 1.15em;
-  cursor: pointer;
-  color: white;
-  transition: all 0.2s ease;
 }
 
 .articleBtn:hover,

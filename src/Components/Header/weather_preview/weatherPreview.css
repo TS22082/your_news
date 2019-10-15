@@ -1,12 +1,9 @@
 .weather {
-  margin-right: 30%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-self: end;
+  margin-right: 15%;
+  display: flex;
 }
 
 .iconImg {
   justify-self: end;
   align-self: center;
-  margin: 0;
 }
