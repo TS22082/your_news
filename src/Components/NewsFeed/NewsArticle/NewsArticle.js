@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import './NewsArticle.css'
+import React, { Component } from 'react';
+import './NewsArticle.css';
 
-export default class NewsArticle extends Component {
+class NewsArticle extends Component {
   researchTopic(topic) {
-    var location = `http://www.google.com/search?hl=en&source=hp&q=${topic}&aq=f&oq=&aqi=`
-    window.open(location, '_blank')
+    var location = `http://www.google.com/search?hl=en&source=hp&q=${topic}&aq=f&oq=&aqi=`;
+    window.open(location, '_blank');
   }
 
   seeArticlePage(article) {
-    window.open(article, '_blank')
+    window.open(article, '_blank');
   }
 
   render() {
@@ -20,7 +20,7 @@ export default class NewsArticle extends Component {
         <button
           className="researchBtn"
           onClick={() => {
-            this.researchTopic(this.props.title)
+            this.researchTopic(this.props.title);
           }}
         >
           Research Topic
@@ -32,6 +32,8 @@ export default class NewsArticle extends Component {
           To Article
         </button>
       </div>
-    )
+    );
   }
 }
+
+export default NewsArticle;
