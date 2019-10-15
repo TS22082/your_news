@@ -1,5 +1,5 @@
 .weather {
-  padding-right: 30%;
+  margin-right: 30%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-self: end;

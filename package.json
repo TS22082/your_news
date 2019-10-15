@@ -5,10 +5,9 @@
   "homepage": "https://TS22082.github.io/your_news/",
   "dependencies": {
     "gh-pages": "^1.2.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-geolocated": "^2.4.1",
     "react-scripts": "^2.1.5"
   },
   "scripts": {

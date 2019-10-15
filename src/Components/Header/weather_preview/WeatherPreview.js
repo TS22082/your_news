@@ -1,32 +1,29 @@
-import React, { Component } from 'react'
-import './weatherPreview.css'
-import { geolocated } from 'react-geolocated'
-import WEATHER_API_KEY from './../../../weather_secret'
-import $ from 'jquery'
+import React, { Component } from 'react';
+import './weatherPreview.css';
+import WEATHER_API_KEY from './../../../weather_secret';
+import $ from 'jquery';
 
 class WeatherPreview extends Component {
   constructor() {
-    super()
-    this.state = { longitude: '', latitude: '', name: '', temp: '', icon: '' }
-    this.getWeather = this.getWeather.bind(this)
+    super();
+    this.state = { longitude: '', latitude: '', name: '', temp: '', icon: '' };
+    this.getWeather = this.getWeather.bind(this);
   }
 
   getWeather() {
-    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${
-      this.state.latitude
-    }&lon=${this.state.longitude}&units=imperial&APPID=${WEATHER_API_KEY}`
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&units=imperial&APPID=${WEATHER_API_KEY}`;
     $.ajax({
       url: weatherURL,
       success: results => {
-        console.log(results)
+        console.log(results);
         this.setState({
           name: results.name,
           temp: Math.round(results.main.temp),
           icon: results.weather[0].icon
-        })
-        console.log(this.state)
+        });
+        console.log(this.state);
       }
-    })
+    });
   }
 
   componentDidMount() {
@@ -34,13 +31,13 @@ class WeatherPreview extends Component {
       this.setState({
         longitude: position.coords.longitude,
         latitude: position.coords.latitude
-      })
-      this.getWeather()
-    })
+      });
+      this.getWeather();
+    });
   }
 
   render() {
-    const iconImg = `https://openweathermap.org/img/w/${this.state.icon}.png`
+    const iconImg = `https://openweathermap.org/img/w/${this.state.icon}.png`;
     return !this.state.name ? null : (
       <div className="weather">
         <p>
@@ -48,14 +45,8 @@ class WeatherPreview extends Component {
         </p>
         <img src={iconImg} alt="nope" className="iconImg" />
       </div>
-    )
+    );
   }
 }
 
-export default geolocated({
-  positionOptions: {
-    enableHighAccuracy: false
-  },
-  userDecisionTimeout: 5000,
-  watchPosition: true
-})(WeatherPreview)
+export default WeatherPreview;
