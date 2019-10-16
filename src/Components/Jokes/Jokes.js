@@ -5,12 +5,12 @@ class Jokes extends PureComponent {
   async componentDidMount() {
     let joke = await axios.get('https://icanhazdadjoke.com/', {
       headers: {
-        Accept: 'text/plain'
+        Accept: 'application/json'
       }
     });
-
-    console.log(joke.data);
+    console.log(joke.data.joke);
   }
+
   render() {
     return <div></div>;
   }
