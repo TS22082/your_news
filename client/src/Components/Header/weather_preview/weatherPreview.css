@@ -1,6 +1,15 @@
 .weather {
   margin-right: 15%;
   display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.weather p {
+  width: 150px;
+  color: white;
+  text-align: right;
 }
 
 .iconImg {

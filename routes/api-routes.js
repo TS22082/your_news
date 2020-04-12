@@ -14,7 +14,7 @@ router.get("/news/top-news", async (req, res) => {
     const newsResults = await axios.get(newsUrl);
     res.send(newsResults.data);
   } catch {
-    res.send({ message: "There was an error" });
+    res.send({ message: "There was an error recieving the news" });
   }
 });
 
@@ -25,7 +25,7 @@ router.get("/weather/by-location", async (req, res) => {
     const weatherResults = await axios.get(weatherUrl);
     res.send(weatherResults.data);
   } catch {
-    res.send({ message: "There was an error" });
+    res.send({ message: "There was an error recieving the weather" });
   }
 });
 
