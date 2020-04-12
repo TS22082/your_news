@@ -1,4 +1,6 @@
 .weather {
   width: 100%;
   color: white;
+  text-align: right;
+  margin-right: 15%;
 }
