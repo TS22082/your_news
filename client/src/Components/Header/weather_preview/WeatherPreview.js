@@ -25,10 +25,11 @@ function WeatherPreview() {
   }, []);
 
   const iconImg = `https://openweathermap.org/img/w/${weather.icon}.png`;
-  return (
+
+  return !weather.name ? null : (
     <div className="weather">
       <h3>{`${weather.name}: ${weather.temp} F`} &#778;</h3>
-      {!weather.icon ? null : <img src={iconImg} alt="image broken" />}
+      <img src={iconImg} alt="image broken" />
     </div>
   );
 }
