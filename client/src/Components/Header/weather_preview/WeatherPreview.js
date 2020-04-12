@@ -16,8 +16,6 @@ function WeatherPreview() {
         `/weather/by-location?lon=${position.coords.longitude}&lat=${position.coords.latitude}`
       );
 
-      console.log(results);
-
       setWeather({
         name: results.data.name,
         temp: Math.round(results.data.main.temp),
@@ -27,11 +25,9 @@ function WeatherPreview() {
   }, []);
 
   return !weather.name ? null : (
-    <div className="weather">
-      <h3>
-        {`${weather.name}: ${weather.temp} F`} &#778; - {weather.main}
-      </h3>
-    </div>
+    <h3 className="weather">
+      {`${weather.name}: ${weather.temp} F`} &#778; - {weather.main}
+    </h3>
   );
 }
 

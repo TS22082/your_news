@@ -1,13 +1,5 @@
 .weather {
   margin-right: 15%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
-}
-
-.weather h3 {
-  width: 250px;
+  width: 350px;
   color: white;
-  text-align: right;
 }
