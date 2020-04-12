@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import './weatherPreview.css';
-import WEATHER_API_KEY from './../../../weather_secret';
-import axios from 'axios';
+import React, { Component } from "react";
+import "./weatherPreview.css";
+import WEATHER_API_KEY from "../../../weather_secret";
+import axios from "axios";
 
 class WeatherPreview extends Component {
   constructor() {
     super();
-    this.state = { longitude: '', latitude: '', name: '', temp: '', icon: '' };
+    this.state = { longitude: "", latitude: "", name: "", temp: "", icon: "" };
     this.getWeather = this.getWeather.bind(this);
   }
 
@@ -18,15 +18,15 @@ class WeatherPreview extends Component {
     this.setState({
       name: results.data.name,
       temp: Math.round(results.data.main.temp),
-      icon: results.data.weather[0].icon
+      icon: results.data.weather[0].icon,
     });
   }
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(position => {
+    navigator.geolocation.getCurrentPosition((position) => {
       this.setState({
         longitude: position.coords.longitude,
-        latitude: position.coords.latitude
+        latitude: position.coords.latitude,
       });
       this.getWeather();
     });
