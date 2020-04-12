@@ -15,7 +15,7 @@ function WeatherPreview() {
       const results = await axios.get(
         `/weather/by-location?lon=${position.coords.longitude}&lat=${position.coords.latitude}`
       );
-      console.log(results);
+
       setWeather({
         name: results.data.name,
         temp: Math.round(results.data.main.temp),
@@ -27,10 +27,8 @@ function WeatherPreview() {
   const iconImg = `https://openweathermap.org/img/w/${weather.icon}.png`;
   return (
     <div className="weather">
-      <p>
-        {weather.name}: {weather.temp} F &#778;
-      </p>
-      <img src={iconImg} alt="nope" className="iconImg" />
+      <h3>{`${weather.name}: ${weather.temp} F`} &#778;</h3>
+      <img src={iconImg} alt="image broken" />
     </div>
   );
 }

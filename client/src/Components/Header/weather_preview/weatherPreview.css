@@ -6,13 +6,8 @@
   height: 100%;
 }
 
-.weather p {
+.weather h3 {
   width: 150px;
   color: white;
   text-align: right;
-}
-
-.iconImg {
-  justify-self: end;
-  align-self: center;
 }
