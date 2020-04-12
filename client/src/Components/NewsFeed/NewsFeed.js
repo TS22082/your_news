@@ -22,7 +22,7 @@ function NewsFeed() {
   ) : (
     <div className="newsContainer">
       {newsArticles.map((article, index) => (
-        <div>
+        <div key={index}>
           <NewsArticle
             name={article.source.name}
             title={article.title}

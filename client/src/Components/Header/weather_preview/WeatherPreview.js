@@ -28,7 +28,7 @@ function WeatherPreview() {
   return (
     <div className="weather">
       <h3>{`${weather.name}: ${weather.temp} F`} &#778;</h3>
-      <img src={iconImg} alt="image broken" />
+      {!weather.icon ? null : <img src={iconImg} alt="image broken" />}
     </div>
   );
 }
