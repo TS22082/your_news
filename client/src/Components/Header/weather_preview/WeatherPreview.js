@@ -1,16 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./weatherPreview.css";
 import WEATHER_API_KEY from "../../../weather_secret";
 import axios from "axios";
 
-class WeatherPreview extends Component {
-  constructor() {
-    super();
-    this.state = { longitude: "", latitude: "", name: "", temp: "", icon: "" };
-    this.getWeather = this.getWeather.bind(this);
-  }
+function WeatherPreview() {
+  const [coord, setCoords] = useState({ lon: null, lat: null });
 
-  async getWeather() {
+  async function getWeather() {
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&units=imperial&APPID=${WEATHER_API_KEY}`;
 
     let results = await axios.get(weatherURL);
@@ -22,27 +18,24 @@ class WeatherPreview extends Component {
     });
   }
 
-  componentDidMount() {
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      this.setState({
-        longitude: position.coords.longitude,
-        latitude: position.coords.latitude,
+      setCoords({
+        lon: position.coords.longitude,
+        lat: position.coords.latitude,
       });
-      this.getWeather();
     });
-  }
+  }, []);
 
-  render() {
-    const iconImg = `https://openweathermap.org/img/w/${this.state.icon}.png`;
-    return !this.state.name ? null : (
-      <div className="weather">
-        <p>
-          {this.state.name}: {this.state.temp} F &#778;
-        </p>
-        <img src={iconImg} alt="nope" className="iconImg" />
-      </div>
-    );
-  }
+  // const iconImg = `https://openweathermap.org/img/w/${this.state.icon}.png`;
+  return (
+    <div className="weather">
+      <p>
+        {this.state.name}: {this.state.temp} F &#778;
+      </p>
+      <img src={iconImg} alt="nope" className="iconImg" />
+    </div>
+  );
 }
 
 export default WeatherPreview;
