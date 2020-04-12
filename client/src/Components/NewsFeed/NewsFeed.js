@@ -1,5 +1,4 @@
-import $ from "jquery";
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import Loading from "./Loading/Loading";
 import NewsArticle from "./NewsArticle/NewsArticle";
@@ -22,13 +21,20 @@ function NewsFeed() {
     <Loading />
   ) : (
     <div className="newsContainer">
-      {newsArticles.map((article) => (
-        <NewsArticle
-          name={article.source.name}
-          title={article.title}
-          description={article.description}
-          url={article.url}
-        />
+      {newsArticles.map((article, index) => (
+        <div>
+          <NewsArticle
+            name={article.source.name}
+            title={article.title}
+            description={article.description}
+            url={article.url}
+          />
+          {index + 1 === newsArticles.length ? (
+            <div className="lastRow" />
+          ) : (
+            <hr />
+          )}
+        </div>
       ))}
     </div>
   );
