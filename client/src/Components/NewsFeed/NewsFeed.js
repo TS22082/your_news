@@ -1,5 +1,5 @@
 import $ from "jquery";
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 
 import Loading from "./Loading/Loading";
 import NewsArticle from "./NewsArticle/NewsArticle";
@@ -7,35 +7,31 @@ import NewsArticle from "./NewsArticle/NewsArticle";
 import "./NewsFeed.css";
 import axios from "axios";
 
-class NewsFeed extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-    };
-    this.getNews = this.getNews.bind(this);
-  }
+function NewsFeed() {
+  const [loading, setLoading] = useState(true);
+  const [newsArticles, setArticles] = useState([]);
 
-  componentDidMount() {
-    this.getNews();
-  }
-
-  //   <NewsArticle
-  //   name={article.source.name}
-  //   title={article.title}
-  //   description={article.description}
-  //   url={article.url}
-  // />
-
-  getNews() {
+  useEffect(() => {
     axios.get("/news/top-news").then((newsResponse) => {
-      console.log(newsResponse.data);
+      setArticles(newsResponse.data.articles);
+      setLoading(false);
     });
-  }
+  }, []);
 
-  render() {
-    return this.state.loading ? <Loading /> : <div>{this.state.rows}</div>;
-  }
+  return loading ? (
+    <Loading />
+  ) : (
+    <div className="newsContainer">
+      {newsArticles.map((article) => (
+        <NewsArticle
+          name={article.source.name}
+          title={article.title}
+          description={article.description}
+          url={article.url}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default NewsFeed;
