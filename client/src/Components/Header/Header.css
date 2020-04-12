@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-content: center;
+  height: 10vh;
+  background-color: #696969;
+}
+
+.title {
+  color: white;
+  padding-left: 15%;
+  width: 100%;
+}
+
+.lastRow {
+  margin-bottom: 15px;
+}
