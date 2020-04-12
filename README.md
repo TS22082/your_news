@@ -1,10 +1,10 @@
 # Your News
 
-A website thats meant to show news from multiple sources and give the user a way to research the topic and view the original source.
+A website that shows news from multiple sources and gives me a way to research the topic and view the original source.
 
 # Motivation
 
-I was tired of having to go to multiple websites to get a full idea of the news so I made a custom feed mor myself. If I ever want to research the topic or see if its fake I'll typically google the title so I made a button to automate the process.
+It takes to much time get well rounded news so I made a web app to show everyones news on one screen.
 
 # Build Status
 
