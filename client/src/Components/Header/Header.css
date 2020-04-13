@@ -4,6 +4,7 @@
   align-items: center;
   height: 10vh;
   background-color: #696969;
+  box-shadow: 2px 2px 6px 4px #ccc;
 }
 
 .title {
