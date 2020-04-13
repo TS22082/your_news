@@ -9,6 +9,12 @@
   transition: all 0.2s ease;
 }
 
+.researchBtn,
+.articleBtn {
+  width: 150px;
+  border-radius: 0;
+}
+
 .researchBtn {
   background-color: #2ecc71;
 }
@@ -21,4 +27,11 @@
 .researchBtn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 799px) {
+  .researchBtn,
+  .articleBtn {
+    width: 50%;
+  }
 }
