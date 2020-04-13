@@ -1,4 +1,4 @@
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 800px) {
   .weather {
     width: 100%;
     color: white;
@@ -7,9 +7,10 @@
     margin-right: 15%;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 799px) {
   .weather {
     width: 100%;
+    padding-top: 10px;
     color: white;
     text-shadow: 2px 2px rgb(58, 58, 58);
   }

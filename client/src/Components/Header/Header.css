@@ -1,4 +1,4 @@
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 800px) {
   .header {
     display: flex;
     align-content: center;
@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 799px) {
   .header {
     min-height: 60px;
     display: grid;
@@ -32,6 +32,7 @@
   .title {
     color: white;
     align-self: flex-end;
+    padding-bottom: 10px;
     text-shadow: 2px 2px rgb(58, 58, 58);
     width: 100%;
   }
