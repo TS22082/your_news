@@ -37,7 +37,13 @@ git clone https://github.com/TS22082/your_news.git
 
 - run npm install from inside the root directory AND the client directory.
 
-- From inside project folder type (requires Nodemon):
+```
+npm install
+cd client
+npm install
+```
+
+- From inside project folder type (requires Nodemon) to start server and client:
 
 ```
 npm run dev
