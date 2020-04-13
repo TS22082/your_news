@@ -1,6 +1,14 @@
-.weather {
-  width: 100%;
-  color: white;
-  text-align: right;
-  margin-right: 15%;
+@media only screen and (min-width: 601px) {
+  .weather {
+    width: 100%;
+    color: white;
+    text-align: right;
+    margin-right: 15%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .weather {
+    width: 100%;
+    color: white;
+  }
 }
