@@ -1,10 +1,10 @@
 # Your News
 
-A website that shows news from multiple sources and gives me a way to research the topic and view the original source.
+A web app that shows news from multiple sources and gives the viewer a way to research the topic and view the original source.
 
 # Motivation
 
-It takes to much time get well rounded news so I made a web app to show everyones news on one screen.
+It took to much time to go to each independent news outlet so I created a way to see the everyones news on one page.
 
 # Build Status
 
@@ -15,7 +15,6 @@ Live: [here](https://your-news.herokuapp.com/) on Heroku.
 - Node
 - Express
 - React
-- Axios
 
 # APIs
 
@@ -43,8 +42,29 @@ cd client
 npm install
 ```
 
+**_ Note: you will need accounts and api keys from the newsapi and open weather map._**
+
+Create a .env file in root directory:
+
+```
+NEWS_API=<your_news_api_key>
+WEATHER_API=<your_weather_api_key>
+```
+
 - From inside project folder type (requires Nodemon) to start server and client:
 
 ```
 npm run dev
+```
+
+You can also just run the server for developement:
+
+```
+npm run server
+```
+
+You can also just run the client for developement:
+
+```
+npm run client
 ```
