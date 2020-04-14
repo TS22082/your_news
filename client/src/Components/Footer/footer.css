@@ -1,18 +1,31 @@
 .footer {
+  min-height: 50px;
   height: 8vh;
   color: white;
   display: grid;
   align-items: center;
+  justify-content: center;
   background-color: black;
   text-align: center;
 }
 
-.newsApi {
+.footer p {
+  margin: 0;
+}
+
+.footer a {
   text-decoration: none;
+}
+
+.newsApi {
   color: #2ecc71;
 }
 
-.github {
-  text-decoration: none;
+.openWeather {
   color: #3498db;
+}
+
+.github {
+  font-weight: bold;
+  color: white;
 }
