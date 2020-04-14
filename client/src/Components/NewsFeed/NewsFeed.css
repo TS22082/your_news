@@ -13,3 +13,11 @@ hr {
   border-radius: 5px;
   margin-top: 15px;
 }
+
+@media only screen and (max-width: 450px) {
+  .newsContainer {
+    padding-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
