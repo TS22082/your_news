@@ -6,7 +6,7 @@
   font-size: 1.15em;
   cursor: pointer;
   color: white;
-  transition: all 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .researchBtn,
@@ -37,6 +37,11 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .articleCard h3 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
   .researchBtn,
   .articleBtn {
     width: 100%;

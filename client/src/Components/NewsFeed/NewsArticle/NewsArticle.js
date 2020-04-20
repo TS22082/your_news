@@ -12,7 +12,7 @@ function NewsArticle(props) {
   }
 
   return (
-    <div>
+    <div className="articleCard">
       <h3>{props.name}</h3>
       <h4>{props.title}</h4>
       <p>{props.description}</p>
