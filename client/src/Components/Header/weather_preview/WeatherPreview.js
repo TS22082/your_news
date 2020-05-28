@@ -12,15 +12,19 @@ function WeatherPreview() {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async (position) => {
-      const results = await axios.get(
-        `/weather/by-location?lon=${position.coords.longitude}&lat=${position.coords.latitude}`
-      );
+      try {
+        const results = await axios.get(
+          `/weather/by-location?lon=${position.coords.longitude}&lat=${position.coords.latitude}`
+        );
 
-      setWeather({
-        name: results.data.name,
-        temp: Math.round(results.data.main.temp),
-        main: results.data.weather[0].main,
-      });
+        setWeather({
+          name: results.data.name,
+          temp: Math.round(results.data.main.temp),
+          main: results.data.weather[0].main,
+        });
+      } catch (err) {
+        console.log({ error: err });
+      }
     });
   }, []);
 
