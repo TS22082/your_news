@@ -2,7 +2,7 @@
   .weather {
     width: 100%;
     color: white;
-    text-shadow: 2px 2px rgb(58, 58, 58);
+    text-shadow: 2px 2px #301b3f;
     text-align: right;
     margin-right: 15%;
   }
@@ -12,6 +12,6 @@
   .weather {
     width: 100%;
     color: white;
-    text-shadow: 2px 2px rgb(58, 58, 58);
+    text-shadow: 2px 2px #301b3f;
   }
 }

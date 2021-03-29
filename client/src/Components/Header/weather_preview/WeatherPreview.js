@@ -11,6 +11,11 @@ function WeatherPreview() {
     icon: null,
   });
 
+  const [checked, setChecked] = useState(false);
+  const handleChange = (nextChecked) => {
+    setChecked(nextChecked);
+  };
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async (position) => {
       try {
