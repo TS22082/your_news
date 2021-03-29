@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Switch from "react-switch";
 
 import "./weatherPreview.css";
 
@@ -30,7 +31,7 @@ function WeatherPreview() {
 
   return !weather.name ? null : (
     <h3 className="weather">
-      {`${weather.name}: ${weather.temp} F`} &#778; - {weather.main}
+      {`${weather.temp} F`} &#778; - {weather.main}
     </h3>
   );
 }
