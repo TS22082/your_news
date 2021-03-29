@@ -2,25 +2,24 @@
 .articleBtn {
   padding: 10px;
   margin-top: 2%;
-  border-style: none;
   font-size: 1.15em;
   cursor: pointer;
+  width: 150px;
+  background-color: #151515;
+  border-style: solid;
+  border-color: #3c415c;
+  border-width: 3px;
+  border-radius: 4px;
   color: white;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.researchBtn,
-.articleBtn {
-  width: 150px;
-  border-radius: 0;
-}
-
 .researchBtn {
-  background-color: #184d47;
+  margin-right: 2px;
 }
 
 .articleBtn {
-  background-color: #3c415c;
+  margin-left: 2px;
 }
 
 .articleBtn:hover,
@@ -36,7 +35,7 @@
 @media only screen and (max-width: 799px) {
   .researchBtn,
   .articleBtn {
-    width: 50%;
+    width: 100%;
   }
 }
 

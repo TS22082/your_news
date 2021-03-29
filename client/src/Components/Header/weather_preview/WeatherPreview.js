@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Switch from "react-switch";
 
 import "./weatherPreview.css";
 
@@ -10,11 +9,6 @@ function WeatherPreview() {
     temp: null,
     icon: null,
   });
-
-  const [checked, setChecked] = useState(false);
-  const handleChange = (nextChecked) => {
-    setChecked(nextChecked);
-  };
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async (position) => {
