@@ -1,3 +1,9 @@
+.hr {
+  width: 100vw;
+  height: 4px;
+  background-color: #301b3f;
+}
+
 @media only screen and (min-width: 800px) {
   .header {
     display: flex;
@@ -5,8 +11,7 @@
     align-items: center;
     min-height: 60px;
     height: 10vh;
-    background-color: #151515;
-    box-shadow: 2px 2px 6px 4px #301b3f;
+    background-color: black;
   }
 
   .title {
@@ -26,7 +31,6 @@
     min-height: 100px;
     height: 20vh;
     background-color: #151515;
-    box-shadow: 2px 2px 6px 4px #301b3f;
   }
 
   .title {
