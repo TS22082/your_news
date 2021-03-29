@@ -11,10 +11,13 @@ function NewsFeed() {
   const [newsArticles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get("/news/top-news").then((newsResponse) => {
-      setArticles(newsResponse.data.articles);
-      setLoading(false);
-    });
+    axios
+      .get("/news/top-news")
+      .then((newsResponse) => {
+        console.log("THE RESPONSE:", newsResponse);
+        setArticles(newsResponse.data.articles);
+      })
+      .then(() => setLoading(false));
   }, []);
 
   return loading ? (
