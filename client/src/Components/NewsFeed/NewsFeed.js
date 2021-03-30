@@ -15,7 +15,7 @@ function NewsFeed() {
       .get("/news/top-news")
       .then((newsResponse) => {
         console.log("THE RESPONSE:", newsResponse);
-        setArticles(newsResponse.data.articles);
+        setArticles(newsResponse.data);
       })
       .then(() => setLoading(false));
   }, []);
