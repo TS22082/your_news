@@ -13,11 +13,9 @@ function NewsFeed() {
   useEffect(() => {
     axios
       .get("/news/top-news")
-      .then((newsResponse) => {
-        console.log("THE RESPONSE:", newsResponse);
-        setArticles(newsResponse.data);
-      })
-      .then(() => setLoading(false));
+      .then((newsResponse) => setArticles(newsResponse.data))
+      .then(() => setLoading(false))
+      .catch((err) => console.log(err));
   }, []);
 
   return loading ? (

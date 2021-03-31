@@ -8,6 +8,7 @@ const getNews = async (req, res) => {
   try {
     const recordedNews = await News.find();
 
+    // if there is nothing in the array add articles to mongodb
     if (!recordedNews.length) {
       const newsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${news_key}`;
       const { data } = await axios.get(newsUrl);
@@ -18,11 +19,12 @@ const getNews = async (req, res) => {
       });
 
       await newEntry.save();
-      res.send(newEntry.data);
-    } else if (
-      parseInt(Date.now()) - parseInt(recordedNews[0]?.lastUpdate) >
-      60000
-    ) {
+      return res.send(newEntry.data);
+    }
+
+    // if the request is happening after a minute since the last request it will make a new request,
+    // update the db, and send back the request
+    if (parseInt(Date.now()) - parseInt(recordedNews[0]?.lastUpdate) > 60000) {
       const newsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${news_key}`;
       const { data } = await axios.get(newsUrl);
 
@@ -31,10 +33,11 @@ const getNews = async (req, res) => {
       updatedNews.lastUpdate = Date.now();
 
       await updatedNews.save();
-      res.send(updatedNews.data);
-    } else {
-      res.send(recordedNews[0].data);
+      return res.send(updatedNews.data);
     }
+
+    // if it makes it through the checks above it will return articles from db
+    res.send(recordedNews[0].data);
   } catch (err) {
     res.send({ error: err });
   }
