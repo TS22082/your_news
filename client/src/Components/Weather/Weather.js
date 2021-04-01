@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import "./weatherPreview.css";
+import "./weather.css";
 
-function WeatherPreview() {
+function Weather() {
   const [weather, setWeather] = useState({
     name: null,
     temp: null,
@@ -35,4 +35,4 @@ function WeatherPreview() {
   );
 }
 
-export default WeatherPreview;
+export default Weather;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import Loading from "./Loading/Loading";
-import NewsArticle from "./NewsArticle/NewsArticle";
+import Loading from "../Loading/Loading";
+import NewsArticle from "../NewsArticle/NewsArticle";
 
 import "./NewsFeed.css";
 import axios from "axios";
