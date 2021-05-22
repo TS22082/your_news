@@ -4,7 +4,7 @@ A web app that shows news from multiple sources and gives the viewer a way to re
 
 # Motivation
 
-It took to much time to go to each independent news outlet so I created a way to see the everyones news on one page.
+I wanted to see unbiased news from multiple news outlets with no interest targeting.
 
 # Build Status
 
@@ -15,6 +15,7 @@ Live: [here](https://your-news.herokuapp.com/) on Heroku.
 - Node
 - Express
 - React
+- Mongodb
 
 # APIs
 
@@ -42,7 +43,7 @@ cd client
 npm install
 ```
 
-**_ Note: you will need accounts and api keys from the newsapi and open weather map._**
+**_ Note: you will need accounts and api keys from the news-api and open weather map._**
 
 Create a .env file in root directory:
 
@@ -57,13 +58,13 @@ WEATHER_API=<your_weather_api_key>
 npm run dev
 ```
 
-You can also just run the server for developement:
+You can also just run the server for development:
 
 ```
 npm run server
 ```
 
-You can also just run the client for developement:
+You can also just run the client for development:
 
 ```
 npm run client
